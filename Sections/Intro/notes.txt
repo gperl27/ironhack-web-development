@@ -1,0 +1,41 @@
+Git -- Development
+
+Made by Linus Torvalds (aka Linux guy also)
+
+
+Github -- Like social media; houses repos
+	Pros:   Good Terms of Service
+		Don't need to know code
+
+Adding remote:
+
+$ git remote add origin https://github.com/username/myproject.git
+
+When cloning, don't need to $ git init
+
+
+$ git rm-f
+
+deletes a file from the local folder
+ex: $ git rm color.css -f
+
+start tracking a file:
+$ git add <file>
+
+untrack a file:
+$ git rm <file> --cached 
+cached means it is NOT tracking
+will still be in local file
+
+$ git add .
+adds all UNTRACKED files
+
+git pull
+Downloads all commits in the remote repo & adds them to local repo
+
+
+
+
+		
+
+
