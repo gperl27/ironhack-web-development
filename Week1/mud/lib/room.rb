@@ -32,11 +32,7 @@ class Room
 	end
 
 	def random_hint
-		#random = Random.new.rand(@openings.length)
 		hint = @openings.sample
 		puts "There is a door to the #{hint}."
 	end
-
-	# def directions
-	# end
 end

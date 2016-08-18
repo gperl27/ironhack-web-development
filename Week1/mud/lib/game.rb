@@ -53,9 +53,6 @@ class Game
 			puts "ONLY 1 ITEM CAN BE CARRIED AT ANY GIVEN TIME"
 			puts "Type [SAVE] to save your game"
 			puts "Type [LOAD] to load saved game"
-			
-
-			#choice = @character.choice
 
 			advanced = true
 
