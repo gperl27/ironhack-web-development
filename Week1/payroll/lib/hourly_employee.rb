@@ -1,4 +1,5 @@
 class HourlyEmployee < Employee
+	include HourlyWage
     def initialize(name, email, hourly_rate, hours_worked)
         super(name, email)
         @hourly_rate = hourly_rate
@@ -6,7 +7,6 @@ class HourlyEmployee < Employee
     end
 
     def calculate_salary
-      #returns the hours worked * hourly_rate
-      @hours_worked * @hourly_rate
+      calculate_hourly_wage(@hours_worked, @hourly_rate)
     end
 end

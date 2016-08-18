@@ -1,3 +1,5 @@
+require_relative("lib/salary.rb")
+require_relative("lib/hourly_wage.rb")
 require_relative("lib/employee.rb")
 require_relative("lib/hourly_employee.rb")
 require_relative("lib/salaried_employee.rb")

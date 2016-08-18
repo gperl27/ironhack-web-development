@@ -1,16 +1,15 @@
-class MultiPaymentEmployee < SalariedEmployee
+class MultiPaymentEmployee < Employee
 	attr_accessor :hours
+  include Salary
+  include HourlyWage
     def initialize(name, email, annual, overtime_rate, hours)
-        super(name, email, annual)
+        super(name, email)
+        @annual = annual
         @overtime_rate = overtime_rate
         @hours = hours
     end
 
     def calculate_salary
-      pay = @annual/52
-      if @hours > 40
-      	(@hours-40) * @overtime_rate + pay
-      else pay
-      end
+      salary = calculate_hourly_wage(@overtime_rate, @hours) + calculate_annual_salary(@annual)
     end
 end
