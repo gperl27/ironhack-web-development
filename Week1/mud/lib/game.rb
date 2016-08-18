@@ -1,21 +1,10 @@
-class Character
-	attr_accessor :input, :inventory
-	def initialize
-		@input = ""
-		@inventory = ""
-	end
-
-	def choice
-		input = gets.chomp
-	end
-end
-
 class Game
-	attr_accessor :rooms
+	attr_accessor :rooms, :rounds, :character
 	def initialize(rounds)
 		@rounds = rounds
 		@rooms = []
 		@character = Character.new
+		#@saves = []
 	end
 
 	def add_rooms(rounds)
@@ -37,10 +26,13 @@ class Game
 
 	def save(count)
 		rooms_count = @rooms.length-count
-		puts rooms_count
+		#puts rooms_count
 		save_rooms = @rooms.slice(count, @rooms.length)
-		data = [rooms_count, save_rooms]
-	end
+		new_save = Save.new(rooms_count)
+		new_save.rooms = save_rooms
+		new_save.character = @character
+		new_save = YAML::Store.new "test.store"
+	end		
 
 
 	def gameplay(count=1)
@@ -60,6 +52,7 @@ class Game
 			puts "PRESS [C] TO CHECK ITEM"
 			puts "ONLY 1 ITEM CAN BE CARRIED AT ANY GIVEN TIME"
 			puts "Type [SAVE] to save your game"
+			puts "Type [LOAD] to load saved game"
 			
 
 			#choice = @character.choice
@@ -98,7 +91,11 @@ class Game
 					puts "Please choose another option."
 					@character.inventory = ""
 				elsif choice.upcase == "SAVE"
-					save(count)
+					save = save(count)
+					puts "<<<GAME SAVED>>>"
+				elsif choice.upcase == "LOAD"
+					#save.start
+					puts "load here"
 				else
 					puts "Invalid input, please try again"
 				end
@@ -114,56 +111,4 @@ class Game
 		randomize_deadends
 		gameplay
 	end
-
-
 end
-
-class Room
-	attr_accessor :openings, :item, :dead_ends
-	def initialize
-		@openings = []
-		@item = ""
-		@dead_ends = []
-	end
-
-	def random_item
-		items = ["a bat", "a sword", "a pencil", "a mallet"]
-		random = Random.new.rand(2)
-
-		if random == 1
-			random_item = items.sample
-			@item = random_item
-		else @item = "nothing of use"
-		end
-	end
-
-	def randomize_openings
-		directions = ["N","E","S","W"]
-		random = Random.new.rand(directions.length)
-		@dead_ends = directions.sample(random)
-		directions.each {|direction|
-			@dead_ends.each { |dead|
-				if direction == dead
-					directions.delete(direction)
-				end
-			}
-		}
-		@openings = directions
-	end
-
-	def random_hint
-		#random = Random.new.rand(@openings.length)
-		hint = @openings.sample
-		puts "There is a door to the #{hint}."
-	end
-
-	# def directions
-	# end
-end
-
-my_game = Game.new(5).start
-
-# my_game.each {|room|
-# 	puts room.item
-# 	puts "Deadends: #{room.dead_ends}."
-# }	
