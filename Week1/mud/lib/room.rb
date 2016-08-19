@@ -4,6 +4,8 @@ class Room
 		@openings = []
 		@item = ""
 		@dead_ends = []
+		random_item
+		randomize_openings
 	end
 
 	def random_item

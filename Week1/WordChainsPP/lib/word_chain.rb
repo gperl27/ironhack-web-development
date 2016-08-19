@@ -18,6 +18,7 @@ class WordChain
 		 word2_array = split_word(word2)
 
 		 	index = 0
+		 	word_aggregator = []
 
 			 word1_array.cycle { |letter|
 			 	letter_copy = word1[index]
@@ -33,6 +34,10 @@ class WordChain
 				else
 					p "does NOT exist"
 					word1[index] = letter_copy
+					word_aggregator << word1[index]
+					if word_aggregator.detect{ |e| word_aggregator.count(e) > 1 } != nil
+						break
+					end
 			 	end
 			 	p index
 			  if index >= word1_array.length-1
