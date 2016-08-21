@@ -23,10 +23,10 @@ require_relative("lib/board.rb")
 # black_bishop = Bishop.new(4,4, "black")
 
 # #queens
-# white_queen = Queen.new(2,4, "white")
+# white_queen = Queen.new(0,3, "white")
 
 # white_pawn = Pawn.new(2,2, "white")
-# black_pawn = Pawn.new(7,7,"black")
+# black_pawn = Pawn.new(1,1,"black")
 
 # #validations
 # black_rook_left.validate_piece
@@ -40,6 +40,25 @@ require_relative("lib/board.rb")
 #board
 
 my_board = Board.new
+
+is_playing = true
+
+puts "Type [START] to start a new game"
+puts "Type [EXIT] to quit the applicaiton at any time"
+
+while is_playing
+	user_input = gets.chomp
+	if user_input.downcase == 'exit'
+		is_playing = false
+	else
+		puts "Please enter a move"
+		user_input = gets.split(",")
+		my_board.move(user_input[0].to_i, user_input[1].to_i,
+						user_input[2].to_i, user_input[3].to_i)
+		puts "Press any key to continue"
+	end
+end
+
 
 
 

@@ -63,8 +63,6 @@ module Validator
 			count+=1
 		end
 
-		
-
 		valid_moves.uniq!
 		invalid_moves.uniq!
 
@@ -77,9 +75,5 @@ module Validator
 
 		puts "*****************************"
 		puts ""
-	end
-
-	def validate_down
-
 	end
 end

@@ -1,6 +1,6 @@
 class Piece
 	include Validator
-	attr_accessor :x, :y
+	attr_accessor :x, :y, :color
 	def initialize(x, y, color)
 		@x = x
 		@y = y
