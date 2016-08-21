@@ -51,7 +51,11 @@ while is_playing
 	if user_input.downcase == 'exit'
 		is_playing = false
 	else
-		puts "Please enter a move"
+		puts "[PLEASE ENTER A MOVE]"
+		puts "[A valid entry has 4 parameters:]"
+		puts "[A coordinate x,y, which indicates the piece at the current position]"
+		puts "[And a final coordinate, which is where the selected piece should go]"
+		puts "***Example user input: 0,3,5,3***"
 		user_input = gets.split(",")
 		my_board.move(user_input[0].to_i, user_input[1].to_i,
 						user_input[2].to_i, user_input[3].to_i)
