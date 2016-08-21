@@ -8,7 +8,7 @@ class Board
 	def move(x,y,final_x, final_y)
 		system "clear"
 		puts "#{@board[x][y].color.capitalize} #{@board[x][y]} to [#{final_x},#{final_y}]"
-		if @board[x][y].can_move?(final_x, final_y) && @board[final_x][final_y].nil?
+		if @board[x][y].can_move?(final_x, final_y) && (@board[final_x][final_y].nil? || (@board[final_x][final_y].color != @board[x][y].color))
 			puts "valid move"
 			@board[x][y].x = final_x
 			@board[x][y].y = final_y
