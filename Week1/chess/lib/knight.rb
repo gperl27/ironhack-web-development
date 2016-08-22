@@ -1,6 +1,6 @@
 class Knight < Piece
 	def can_move?(final_x, final_y)
-		((final_x - @x).abs == 1 && (final_y - @y).abs == 3) || ((final_x - @x).abs == 3 && (final_y - @y).abs == 1)
+		((final_x - @x).abs == 1 && (final_y - @y).abs == 2) || ((final_x - @x).abs == 2 && (final_y - @y).abs == 1)
 	end
 
 	def validate_piece
