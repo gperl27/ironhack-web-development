@@ -17,7 +17,6 @@ class Board
 		else
 			puts "can't do that"
 		end
-
 		show_board
 	end
 
