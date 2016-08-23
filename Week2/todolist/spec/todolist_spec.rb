@@ -34,8 +34,8 @@ RSpec.describe TodoList do
 
 	describe "find task by id method" do 
 		it "go through the list of tasks and find specific task" do
-			expect(@todo.find_task_by_id(13)).to eq(nil)
-			expect(@todo.find_task_by_id(18)).to eq('test')
+			expect(@todo.find_task_by_id(13)).to be_nil
+			expect(@todo.find_task_by_id(18)).to eq(@todo.tasks[0])
 		end
 	end
 

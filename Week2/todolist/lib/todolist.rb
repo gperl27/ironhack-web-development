@@ -20,11 +20,7 @@ class TodoList
 
     def find_task_by_id(id)
     	@tasks.find { |task|
-    		if task.id == id
-    			puts task.content
-    			return task.content
-    		else nil
-    		end
+    		task.id == id
     	}
     end
 
