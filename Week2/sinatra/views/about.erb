@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/styles.css">
+
+<h1>Favorite Artists:</h1>
+<ul>
+	<li>Pink Floyd</h1>
+	<li>Yes</li>
+	<li>Miles Davis</li>
+</ul>
+
+<img src="/dentist.gif">
+
+<% if Date.today.tuesday? %>
+	<p>
+		Something cool is here
+	</p>
+<% end %>
+
+	<p>
+		<%= Date.today %>
+	</p>
+	<ul>
+		<% @ingredients.each do |ing| %>
+			<li> <%= ing %> </li>
+		<% end %>
+	</ul>
