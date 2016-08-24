@@ -9,9 +9,14 @@ get "/" do
 end
 
 post "/" do
-	load = YAML::load(File.open('./public/calcs.yml'))
-	@last_input = load["last"]
-	erb :home
+	operation = params[:operation]
+	if operation == "save"	
+		load = YAML::load(File.open('./public/calcs.yml'))
+		@last_input = load["last"]
+		erb :home
+	else
+		erb :home
+	end
 end
 
 post "/calculate" do
