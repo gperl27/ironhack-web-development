@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home | Online Calculator</title>
+</head>
+<body>
+	<h1>Welcome to the online calculator!</h1>
+	<form action="/calculate" method="POST">
+		<input type="number" name="first_number" placeholder="1st number" value=<%= @last_input %> >
+		<input type="number" name="second_number" placeholder="2nd number">
+		<br>
+		<br>
+		<button type="submit" name="operation" value="addition">Add</button>
+		<button type="submit" name="operation" value="subtraction">Subtract</button>
+		<button type="submit" name="operation" value="division">Divide</button>
+		<button type="submit" name="operation" value="multiply">Multiply</button>
+	</form>
+</body>
+</html>
