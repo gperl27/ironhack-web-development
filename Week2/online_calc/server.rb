@@ -1,5 +1,6 @@
 require "sinatra"
 require "yaml"
+require "sinatra/reloader" if development?
 require_relative("lib/calculator.rb")
 
 my_calc = Calculator.new
@@ -42,4 +43,5 @@ post "/calculate" do
 		my_calc.save(@result)
 	end
 	erb :calculate
+	#redirect "/"
 end
