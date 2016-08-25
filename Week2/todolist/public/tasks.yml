@@ -1,14 +1,2 @@
 ---
-Josh:
-- !ruby/object:Task
-  content: test
-  id: 1
-  complete: true
-  created_at: 2016-08-25 09:25:26.503004688 -04:00
-  updated_at: 
-- !ruby/object:Task
-  content: test
-  id: 3
-  complete: false
-  created_at: 2016-08-25 09:26:04.432938869 -04:00
-  updated_at: 
+Josh: []
