@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Posts | Blog</title>
+</head>
+<body>
+	<h1>Post List:</h1>
+	<% @posts.each_with_index do |post, index| %>
+	<ul>
+		<a href="/post_details/<%= index %>">
+			<h2><%= post.title %> by <%= post.author %></h2>
+		</a>
+		<h4>Category: <%= post.category %></h4>
+		<h5><%= post.date %></h5>
+	</ul>
+	<% end %>
+	<a href="/new_post"><button>New Post</button></a>
+</body>
+</html>
