@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todolilst | Task Index</title>
+</head>
+<body>
+	<h1>Task List</h1>
+	<% @tasks.each do |task| %>
+		<ul>
+			<% if task.complete? %>
+
+			<form method='post' action='/delete'>
+				<li><%= task.content %> <b>COMPLETE</b>
+				<button type="submit" name="delete_task" value=<%= task.id %>>Delete</button>
+				</li>
+			</form>
+
+			<% else %>
+
+				<form method='post' action='/complete'>
+					<li><%= task.content %>
+					<button type="submit" name="complete_task" value=<%= task.id %>>Complete</button>
+					</li>
+				</form>
+
+			<% end %>
+		</ul>
+	<% end %>
+		<a href="/new_task"><button>New Task</button></a>
+</body>
+</html>

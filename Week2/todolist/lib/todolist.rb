@@ -36,4 +36,10 @@ class TodoList
 	  end
 	end
 
+    def load_tasks
+        load = YAML::load(File.open('./public/tasks.yml'))
+        @tasks = load[@user]
+        #p @tasks
+    end
+
 end
