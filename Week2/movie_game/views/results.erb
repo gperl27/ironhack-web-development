@@ -8,15 +8,18 @@
 	<h1> Movie Trivia </h1>
 	<h3><%= @question %></h3>
 	<% @movies.each_with_index do |movie, index| %>
+
+		
+
 		<% if @random_movie == movie %>
 			<img src='<%= movie.poster %>' onclick="alert('CORRECT')">
 		<% else %>
 		 	<img src='<%= movie.poster %>' onclick="alert('INCORRECT')">
 		 <% end %>
-
 		<% if index >= 8 %>
 			<% break %>
 		<% end %>
+
 	<% end %>
 </body>
 </html>
