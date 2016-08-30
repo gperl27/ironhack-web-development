@@ -1,0 +1,198 @@
+/** UNIVERSAL **/
+
+/** HEADER **/
+
+.my-nav {
+  background-color: #fff !important;
+  border: none !important;
+  margin-bottom: 0 !important;
+}
+
+.glyphicon-forward:before {
+  font-size: 10px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: #ed564b !important;
+  background-color: #fff !important;
+}
+
+.navbar-brand {
+  color: #000 !important;
+  font-style: upcase;
+}
+
+/** CAROUSEL **/
+
+.item {
+  height: 500px;
+  padding-top: 25px;
+  color: #fff !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.item:nth-child(1) {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhhy2z0RoBZOnjh9t5_klkfxY92F0WL_Tc-G-yB0VmdlcVNM0BLQ');
+  
+}
+
+.item:nth-child(2) {
+  background-image: url('http://images5.fanpop.com/image/photos/30800000/-Random-random-30843841-1920-1080.jpg');
+}
+
+.item:nth-child(3) {
+  background-image: url('https://www.cwi.nl/system/files/com/HalldoraCoverCropLandscape.png');
+}
+
+.item h3 {
+  text-align: center;
+}
+
+.item p{
+  padding: 50px 300px;
+}
+
+.myCarousel {
+  background-color: #fff !important;
+}
+
+.carousel-control {
+  margin-top: 100px;
+  height: 100px;
+  opacity: 1 !important;
+  color: #fff !important;
+  background-color: #f4473a !important;
+}
+
+.carousel-control:hover {
+  opacity: .7 !important;
+}
+
+/** SECTION 1 **/
+
+.section-one {
+  color: #fff;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #ed564b;
+  border-top: 5px solid #f96b61;
+  border-bottom: 5px solid #f96b61;
+}
+
+.section-one h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.section-one p {
+  margin: 0 0 10px;
+}
+
+.section-one span {
+    border: 5px solid #fff;
+    background: transparent;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    display: block;
+    line-height: 65px;
+    text-align: center;
+    margin: 0px auto;
+    font-size: 20px;
+}
+
+/** SECTION TWO **/
+
+.section-two div {
+  /** position: relative; **/
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.col-6 {
+  /** width: 50%; **/
+}
+
+.section-two img {
+  margin-bottom: 15px;
+}
+
+.section-two a {
+  text-align: center;
+  color: #000 !important;
+}
+
+.section-two a:hover {
+  color: #000 !important;
+}
+
+.special-p {
+    font-weight: bold;
+    color: #aaa;
+}
+
+/** SECTION THREE **/
+
+.section-three img, span, p {
+  margin-bottom: 25px;
+}
+
+.section-three span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.section-three span a {
+  color: #f4473a;
+}
+
+/** FOOTER **/
+
+.prefooter {
+  margin-top: 25px;
+  padding: 20px 25px 40px 25px !important;
+  background: #3b3b3b;
+  border-top: 5px solid #ed564b;
+}
+
+.prefooter h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.prefooter ul {
+  list-style-type: none;
+  margin: 0px 0px;
+  padding: 0px;
+}
+
+.prefooter p {
+   color: #aaa;
+    padding: 5px 0px;
+    margin: 0;
+    line-height: 150%;
+}
+
+.prefooter li {
+    margin: 0;
+    padding: 0px 0px;
+    border-bottom: 1px dotted rgba(255,255,255,.2);
+}
+
+.prefooter a {
+  color: #aaa;
+  text-decoration: none !imp;
+  padding: 7px 0px 7px 0px;
+  display: block;
+}
+
+.copyright {
+    color: #eee;
+  padding: 25px;
+  background: #292929;
+  font-size: 12px;
+}

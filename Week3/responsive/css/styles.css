@@ -1,0 +1,27 @@
+
+/** HEADER **/
+
+#header-image {
+  height: 100vh;
+  background-image: url('https://i.ytimg.com/vi/lQb3lT-s8_0/maxresdefault.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  #header-image {
+    background-image: url('https://i.ytimg.com/vi/heotcTKCCtk/maxresdefault.jpg');
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #header-image {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/47/Battersea_Power_Station_in_London.jpg');
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #header-image {
+    background-image: url('https://wallpaperscraft.com/image/pink_floyd_triangle_colors_space_background_3724_3840x2160.jpg');
+  }
+}
