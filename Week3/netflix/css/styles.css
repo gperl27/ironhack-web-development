@@ -1,0 +1,143 @@
+/** UNIVERSAL **/
+
+@font-face {
+    font-family: ProximaNova-Light;
+    src: url("../Netflix/fonts/ProximaNova-Light.otf");
+}
+
+@font-face {
+    font-family: ProximaNova-Reg;
+    src: url("../Netflix/fonts/ProximaNova-Reg.otf");
+}
+
+@font-face {
+    font-family: ProximaNova-Sbold;
+    src: url("../Netflix/fonts/ProximaNova-Sbold.otf");
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding-bottom: 6rem;
+  position: relative;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: ProximaNova-Sbold;
+}
+
+button {
+  font-family: ProximaNova-Light;
+}
+
+
+
+/** HEADER **/
+
+header {
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("../Netflix/images/family.jpg");
+}
+
+header h1 {
+  font-size: 54px;
+}
+
+#logo {
+  margin-left: 25px;
+  height: 150px;
+  width: 250px;
+
+}
+
+nav {
+  width: 100%;
+  display: inline-block;
+}
+
+nav button{
+  margin-right: 50px;
+  margin-top: 50px;
+  float: right;
+  /* position: absolute; */
+  padding: 10px 50px;
+  /* top: 25px;
+  right: 25px; */
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  font-size: 24px;
+}
+
+.header-splash {
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 40%;
+  padding: 75px 25px;
+}
+
+.header-splash button {
+  color: #fff;
+  background-color: #419bf9;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+}
+
+/** SECTION **/
+
+section {
+
+  padding: 25px 50px;
+}
+
+section h2 {
+  font-size: 48px;
+}
+
+section ul {
+  padding-left: 0;
+}
+
+section ul li{
+  display: inline-block;
+}
+
+section ul li img{
+  margin-right: 85px;
+  height: 350px;
+  width: 250px;
+}
+
+/** FOOTER **/
+
+footer {
+
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  margin-top: 50px;
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+}
+
