@@ -4,10 +4,14 @@ var Quiz = require("./lib/quiz");
 
 var q1 = new Question("How many states are there in the US?", "50", 1);
 var q2 = new Question("What is 2 + 2?", "4", 2);
+var q3 = new Question("What language does Rails use?", "Ruby", 3);
+var q4 = new Question("Who invented the Internet?", "Tim Berners Lee", 4);
 
 var myQuiz = new Quiz();
 myQuiz.addQuestion(q1);
 myQuiz.addQuestion(q2);
+myQuiz.addQuestion(q3);
+myQuiz.addQuestion(q4);
 
 myQuiz.assignBonusQuestion();
 
