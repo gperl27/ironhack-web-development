@@ -9,6 +9,8 @@ var myQuiz = new Quiz();
 myQuiz.addQuestion(q1);
 myQuiz.addQuestion(q2);
 
+myQuiz.assignBonusQuestion();
+
 function askQuestions(quiz, index){
     updateOptions(quiz, quiz.questions[index].text, quiz.questions[index].answer, quiz.questions[index].id, index);
     read(options, checkInput);
@@ -18,7 +20,11 @@ function checkInput(err, input){
   if(options.answer === input && options.quiz !== undefined){
       options.quiz.sumPoints(options.quiz.questions[options.id-1]);
       console.log("CORRECT!!!");
+      if(options.quiz.questions[options.index].bonus){
+        console.log("***You got BONUS points!!***");
+      }
       console.log("You currently have " + options.quiz.totalPoints + " points.");
+      console.log("");
       if(options.quiz.questions[options.index+1] !== undefined){
         options.index++;
         askQuestions(options.quiz, options.index);

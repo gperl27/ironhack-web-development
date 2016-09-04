@@ -4,5 +4,6 @@ module.exports = class Question{
     this.answer = answer;
     this.id = id;
     this.points = 4;
+    this.bonus = false;
   }
 }
