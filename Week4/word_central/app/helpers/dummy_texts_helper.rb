@@ -1,0 +1,2 @@
+module DummyTextsHelper
+end

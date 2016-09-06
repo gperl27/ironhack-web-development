@@ -1,0 +1,14 @@
+<h1>Placeholder Text Generation</h1>
+
+<form action='/dummytexts' method='post'>
+  <div>
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+    <label for="dummy_text">How many?</label>
+    <input type='number' name="dummy[user_text]" id="dummy_text">
+    <label for="dummy_text">Words or Paragraphs?</label>
+    <input type="radio" name="dummy[user_type]" value="words"> Words
+<input type="radio" name="dummy[user_type]" value="paragraphs"> Paragraphs
+  </div>
+  <button type="submit">Submit text</button>
+</form>
