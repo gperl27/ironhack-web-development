@@ -1,0 +1,6 @@
+<ul>
+  <% @projects.each do |project| %>
+      <h2><%= project.name %> says:</h2>
+      <li><%= project.description %></li>
+  <% end %>
+</ul>
