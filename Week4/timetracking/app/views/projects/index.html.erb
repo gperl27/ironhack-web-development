@@ -1,6 +1,6 @@
 <ul>
   <% @projects.each do |project| %>
-      <h2><%= project.name %> says:</h2>
+      <%= link_to project.name, "/projects/#{project.id}/time_entries" %>
       <li><%= project.description %></li>
   <% end %>
 </ul>

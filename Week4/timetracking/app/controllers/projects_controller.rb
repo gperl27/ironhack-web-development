@@ -24,6 +24,6 @@ class ProjectsController < ApplicationController
 
     project.save
 
-    redirect_to '/projects/#{project.id}'
+    redirect_to "/projects/#{project.id}"
   end
 end
