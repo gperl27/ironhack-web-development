@@ -5,5 +5,10 @@ Rails.application.routes.draw do
   get '/say_name/:name', to: 'site#say_name'
 
   get 'projects', to: 'projects#index'
+  post '/projects', to: 'projects#create'
+  
+  get '/projects/new', to: 'projects#new'
+
   get '/projects/:id', to: 'projects#show'
+
 end

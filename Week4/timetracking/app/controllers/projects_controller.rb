@@ -2,7 +2,6 @@ class ProjectsController < ApplicationController
   def index
    @projects = Project.order(created_at: :desc)
                             .limit(10)
-    render 'index'
   end
 
   def show
@@ -10,5 +9,21 @@ class ProjectsController < ApplicationController
     unless @project
       render 'no_projects_found'
     end
+  end
+
+  def new
+    @project = Project.new
+    #render 'new' is REDUNDANT
+  end
+
+  def create
+    project = Project.new(
+      name: params[:project][:name],
+      description: params[:project][:description]
+      )
+
+    project.save
+
+    redirect_to '/projects/#{project.id}'
   end
 end
