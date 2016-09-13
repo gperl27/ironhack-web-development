@@ -1,0 +1,9 @@
+<h2>Most Popular Concerts: </h2>
+
+<ul>
+<% @concerts.each do |concert, value| %>
+  <li><%= link_to "#{concert.artist} @ #{concert.venue}",
+        concert %>
+    </li>
+<% end %>
+</ul>

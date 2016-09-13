@@ -1,0 +1,9 @@
+<h2>Search Results for $<%= @price %>:</h2>
+
+<ul>
+<% @concerts.each do |concert| %>
+  <li><%= link_to "#{concert.artist} @ #{concert.venue}",
+        concert %>
+  </li>
+<% end %>
+</ul>

@@ -20,11 +20,7 @@ class TimeEntriesController < ApplicationController
 
     project = Project.find(params[:project_id])
 
-    entry = project.time_entries.new(
-        minutes: params[:time_entry][:minutes],
-        hours: params[:time_entry][:hours],
-        date: params[:time_entry][:date]
-      )
+    entry = project.time_entries.new(time_entry_params)
     entry.save
     redirect_to "/projects/#{project.id}/time_entries"
   end
@@ -37,12 +33,16 @@ class TimeEntriesController < ApplicationController
   def update
     project = Project.find(params[:project_id])
     entry = project.time_entries.find(params[:id])
-    entry.update(
-        minutes: params[:time_entry][:minutes],
-        hours: params[:time_entry][:hours],
-        date: params[:time_entry][:date]
-      )
+    entry.update(time_entry_params)
     redirect_to "/projects/#{project.id}/time_entries"
+  end
+
+  private
+
+  def time_entry_params
+    params.require(:time_entry).permit(:hours, :minutese, :date)
   end
 end
 
+
+  

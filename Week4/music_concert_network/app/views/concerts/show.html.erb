@@ -1,0 +1,28 @@
+
+<h2><%= @concert.artist %>'s Concert</h3>
+
+<h3>Venue</h3>
+<p><%= @concert.venue %></p>
+
+<h3>City</h3>
+<p><%= @concert.city %></p>
+
+<h3>Description</h3>
+<p><%= @concert.description %></p>
+
+<h3>Date</h3>
+<p><%= @concert.date %></p>
+
+<h3>Price of Admission</h3>
+<p>$ <%= @concert.price %></p>
+
+<section class='comments'>
+<h3>Comments: </h3>
+<ul>
+  <% @comments.each do |comment| %>
+    <li><%= comment.description %></li>
+  <% end %>
+</ul>
+</section>
+<%= link_to "Add new comment?", new_concert_comment_path(@concert) %>
+
