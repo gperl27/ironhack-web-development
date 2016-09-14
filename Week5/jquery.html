@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <style type="text/css">
+    .unicorn-mode {
+
+    }
+  </style>
+  <body>
+    <div class="container" style="margin-top: 50px;">
+      <button class="btn btn-primary hello-button">Do Something</button>
+      <p id='elemId'>Hi</p>
+      <p>test</p>
+        <input type="checkbox">
+    </div>
+
+    <script type="text/javascript">
+      
+
+      jQuery.fn.css2 = jQuery.fn.css;
+jQuery.fn.css = function() {
+    if (arguments.length) return jQuery.fn.css2.apply(this, arguments);
+    var attr = ['font-family','font-size','font-weight','font-style','color',
+  'text-transform','text-decoration','letter-spacing','word-spacing',
+  'line-height','text-align','vertical-align','direction','background-color',
+  'background-image','background-repeat','background-position',
+  'background-attachment','opacity','width','height','top','right','bottom',
+  'left','margin-top','margin-right','margin-bottom','margin-left', 'box-shadow', 'border',
+  'padding-top','padding-right','padding-bottom','padding-left',
+  'border-top-width','border-right-width','border-bottom-width',
+  'border-left-width','border-top-color','border-right-color',
+  'border-bottom-color','border-left-color','border-top-style',
+  'border-right-style','border-bottom-style','border-left-style','position',
+  'display','visibility','z-index','overflow-x','overflow-y','white-space',
+  'clip','float','clear','cursor','list-style-image','list-style-position',
+  'list-style-type','marker-offset'];
+    var len = attr.length, obj = {};
+    for (var i = 0; i < len; i++) 
+        obj[attr[i]] = jQuery.fn.css2.call(this, attr[i]);
+    return obj;
+}
+    
+    var p = $("p").css()
+    console.log(p);
+    var b = ($('button').css());
+
+
+
+
+    // var randomColor = Math.floor(Math.random()*16777215).toString(16);
+
+    // function changeColor(){
+    //   console.log('test');
+    //   var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    //   console.log(randomColor);
+    //   $('body').css('background-color', "#" + randomColor);
+    //   $('.container').css('background-color', "#" + randomColor);
+    // }
+
+    // setInterval(changeColor, 100);
+  
+    // $('button').on('click', function(){
+    //   $('.container').fadeToggle();
+    //   $('html').append(this);
+    // });
+
+
+
+
+    
+    
+    // var price = '<p>Only $399.99</p>';
+    // $('.container').on('click', function(){
+    //   $('button').fadeToggle(5000);
+    //   //$(this).remove();
+    // })
+    // $('input[type=checkbox]').prop('type', 'radio');
+    </script>
+  </body>
+</html>
