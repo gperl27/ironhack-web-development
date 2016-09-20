@@ -1,0 +1,20 @@
+<h1><%= @sandwich.name %></h1>
+
+<h2><%= @sandwich.bread_type %></h2>
+
+<ul class='ingredient_list' >
+  f<% @sandwich.ingredients.each do |ing| %>
+    <li><%= ing.name %></li>
+  <% end %>
+</ul>
+
+<h3>Add Ingredients:</h3>
+
+<ul>
+  <% @ingredients.each do |ing| %>
+    <li>
+      <%= ing.name %>
+      <button class='add' data-sandwich="<%= @sandwich.id %>" data-ing="<%= ing.id %>">Add +</button>
+    </li>
+  <% end %>
+</ul>
