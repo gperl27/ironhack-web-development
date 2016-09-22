@@ -1,0 +1,20 @@
+<h2>Keep track of your comics. </h2>
+
+<% if user_signed_in? %>
+
+<h3>See our users' profiels</h3>
+
+  <ul>
+    <% @users.each do |the_user| %>
+      <li>
+        <%= link_to the_user.name, user_path(the_user) %>
+      </li>
+    <% end %>
+  </ul>
+
+<% else %>
+
+<%= link_to "Login", new_user_session_path %>
+<%= link_to "Sign up", new_user_registration_path %>
+
+<% end %>
